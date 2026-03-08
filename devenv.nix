@@ -68,6 +68,8 @@ in
     '';
   };
 
+  instructions.fragments = lib.mkAfter [ (builtins.readFile ./AGENTS.md) ];
+
   enterTest = ''
     set -euo pipefail
     treefmt --version
