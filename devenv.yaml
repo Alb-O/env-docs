@@ -14,9 +14,9 @@ inputs:
   committer:
     url: github:Alb-O/committer
     flake: false
-  env-local-overrides:
-    url: github:Alb-O/env-local-overrides
+  dvnv-local-inputs:
+    url: github:Alb-O/dvnv-local-inputs
     flake: false
 imports:
   - committer
-  - env-local-overrides
+  - dvnv-local-inputs

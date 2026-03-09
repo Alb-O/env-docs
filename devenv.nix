@@ -68,7 +68,7 @@ in
     '';
   };
 
-  instructions.fragments = lib.mkAfter [ (builtins.readFile ./AGENTS.md) ];
+  instructions.instructions = lib.mkAfter [ (builtins.readFile ./AGENTS.md) ];
 
   enterTest = ''
     set -euo pipefail
