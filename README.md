@@ -8,23 +8,23 @@ Reusable documentation environment for polyrepo setups using `devenv` v2.
 - Git hooks: pre-commit `treefmt` and `typos` hooks enabled
 - Scripts: `fmt`, `fmt-check`, `spellcheck`, `spellcheck-fix`, `ci`
 - Merged typos config via `outputs.typos_config`
-- Generates `devenv.local.yaml` (via `dvnv-local-inputs`)
+- Generates `devenv.local.yaml` (via `poly-local-inputs`)
 
 ## Use
 
 ```yaml
 inputs:
-  dvnv-docs-env:
-    url: github:Alb-O/dvnv-docs-env
+  poly-docs-env:
+    url: github:Alb-O/poly-docs-env
     flake: false
 imports:
-  - dvnv-docs-env
+  - poly-docs-env
 ```
 
 ## Consumer treefmt overrides
 
 Consumers can extend the shared docs formatting by adding extra programs under `treefmt.config`.
-This composes with `dvnv-docs-env` defaults (for example, `mdformat` stays enabled):
+This composes with `poly-docs-env` defaults (for example, `mdformat` stays enabled):
 
 ```nix
 {
@@ -34,7 +34,7 @@ This composes with `dvnv-docs-env` defaults (for example, `mdformat` stays enabl
 
 ## Typos Config
 
-Repos can keep a normal `typos.toml` at the repo root. `dvnv-docs-env` merges
+Repos can keep a normal `typos.toml` at the repo root. `poly-docs-env` merges
 that file over `docsEnv.typos.managedConfig` and uses the generated effective
 config for both:
 

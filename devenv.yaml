@@ -11,8 +11,8 @@ inputs:
     inputs:
       nixpkgs:
         follows: nixpkgs
-  dvnv-local-inputs:
-    url: github:Alb-O/dvnv-local-inputs
+  poly-local-inputs:
+    url: github:Alb-O/poly-local-inputs
     flake: false
 imports:
-  - dvnv-local-inputs
+  - poly-local-inputs
